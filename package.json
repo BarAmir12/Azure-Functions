@@ -3,12 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "func start",
+    "start": "cd dist && func start",
+    "build": "tsc && copyfiles -u 1 src/**/*.json dist",
+    "dev": "ts-node src/index.ts",
     "test": "echo \"No tests yet...\""
   },
   "dependencies": {
     "axios": "^0.23.0",
     "joi": "^17.13.3",
     "node-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
   }
 }
